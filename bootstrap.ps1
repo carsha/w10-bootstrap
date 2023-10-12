@@ -49,8 +49,8 @@ Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://cho
 $ChocolateyPackages = Import-Csv ".\choco-packages.csv"
 foreach ($Row in $ChocolateyPackages) {
   if ($Row.Parameters) {
-    choco intall --confirm $Row.Name -params """$($Row.Parameters)"""
+    choco install --confirm $Row.Name -params """$($Row.Parameters)"""
     continue
   }
-  choco intall --confirm $Row.Name
+  choco install --confirm $Row.Name
 }
