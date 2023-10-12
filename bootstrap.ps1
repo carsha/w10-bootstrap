@@ -4,6 +4,11 @@
 $RegistryKeys = Import-Csv ".\registry-keys.csv"
 foreach ($Row in $RegistryKeys) {
   Write-Host "Category:`t$($Row.Category)`nDescription:`t$($Row.Description)"
+  if ($Row.Type -eq 'Binary') {
+    $Value = $Row.Value.Split(",") | ForEach-Object { "0x$_"}
+    Set-ItemProperty -Path $Row.Path -Name $Row.Name -Type $Row.Type -Value ([byte[]]$Value) -Force  
+    continue
+  }
   Set-ItemProperty -Path $Row.Path -Name $Row.Name -Type $Row.Type -Value $Row.Value -Force
 }
 
