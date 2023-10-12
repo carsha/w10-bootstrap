@@ -1,7 +1,7 @@
 ###############################
 # Registry
 ###############################
-$RegistryKeys = Import-Csv ".\registry-keys.csv"
+$RegistryKeys = Import-Csv ".\config\registry-keys.csv"
 foreach ($Row in $RegistryKeys) {
   Write-Host "Setting registry key '$($Row.Category): $($Row.Description)' .."
   if (-not(Test-Path -Path $Row.Path)) { New-Item -Path $Row.Path -Force | Out-Null }
@@ -16,25 +16,10 @@ foreach ($Row in $RegistryKeys) {
 ###############################
 # Windows 10 Metro App Removals
 ###############################
-$AppxPackages = @(
-  "king.com.CandyCrushSaga",
-  "Microsoft.BingWeather",
-  "Microsoft.BingNews",
-  "Microsoft.BingSports",
-  "Microsoft.BingFinance",
-  "Microsoft.XboxApp",
-  "Microsoft.WindowsPhone",
-  "Microsoft.MicrosoftSolitaireCollection",
-  "Microsoft.People",
-  "Microsoft.ZuneMusic",
-  "Microsoft.ZuneVideo",
-  "Microsoft.Office.OneNote",
-  "Microsoft.Windows.Photos",
-  "Microsoft.WindowsComunicationsApps",
-  "Microsoft.SkypeApp"
-)
-foreach ($Package in $AppxPackages) {
-  Write-Host "Removing package '$Package' .."
+$AppxPackages = Import-Csv ".\config\appx-packages.csv"
+foreach ($Row in $AppxPackages) {
+  $Package = $Row.Name
+  Write-Host "Removing package '$($Package): $($Row.Description)' .."
   $PackageFullName = (Get-AppxPackage $Package ).PackageFullName
   $PackageFullNamePro = (Get-AppxProvisionedPackage -Online | Where-Object { $_.Displayname -eq $App }).PackageName
   if ($PackageFullName) { Remove-AppxPackage -Package $PackageFullName | Out-Null }
@@ -51,7 +36,7 @@ Get-Service DiagTrack, Dmwappushservice | Stop-Service | Set-Service -StartupTyp
 ############################
 
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-$ChocolateyPackages = Import-Csv ".\choco-packages.csv"
+$ChocolateyPackages = Import-Csv ".\config\choco-packages.csv"
 foreach ($Row in $ChocolateyPackages) {
   Write-Host "Installing package '$($Row.Name)' .."
   if ($Row.Parameters) {
