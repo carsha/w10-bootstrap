@@ -1,0 +1,28 @@
+Path,Name,Type,Value,Description,Category
+HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced,LaunchTo,DWord,1,Explorer home screen set to 'This PC',UI
+HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer,ShowFrequent,DWord,0,Disable 'Quick Access: Frequent Folders',UI
+HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer,ShowRecent,DWord,0,Disable 'Quick Access: Recent Files',UI
+HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization,NoLockScreen,DWord,1,Disable lock screen before password entry,UI
+HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\MTCUVC,EnableMtcUvc,DWord,0,Use the old volume mixer,UI
+HKCU:\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings,UxOption,DWord,1,Notify to schedule restart,Updates
+HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config,DODownloadMode,DWord,1,Disable P2P downloads outside of LAN,Updates
+HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization,SystemSettingsDownloadMode,DWord,3,Disable P2P downloads outside of LAN,Updates
+HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo,Enabled,DWord,0,Disable advertising ID in apps,Privacy
+HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppHost,EnableWebContentEvaluation,DWord,0,Disable smartscreen filter in store apps,Privacy
+HKLM:\Software\Microsoft\PolicyManager\default\WiFi\AllowWiFiHotSpotReporting,value,DWord,0,Disable WiFi hotspot sharing,Privacy
+HKLM:\Software\Microsoft\PolicyManager\default\WiFi\AllowAutoConnectToWiFiSenseHotspots,value,DWord,0,Disable WiFi hotspot auto-connect,Privacy
+HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search,BingSearchEnabled,DWord,0,Disable start menu Bing search,Privacy
+HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection,AllowTelemetry,DWord,0,Disable Telemetry,Privacy
+HKCU:\Control Panel\Accessibility\StickyKeys,Flags,String,506,Disable sticky keys,UI
+HKCU:\Control Panel\Accessibility\Keyboard Response,Flags,String,122,Disable _,UI
+HKCU:\Control Panel\Accessibility\ToggleKeys,Flags,String,58,Disable _,UI
+HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced,Hidden,DWord,1,,UI
+HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced,HideFileExt,DWord,0,,UI
+HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced,HideDrivesWithNoMedia,DWord,0,,UI
+HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced,ShowSyncProviderNotifications,DWord,0,,UI
+HKCU:\Control Panel\Mouse,SmoothMouseXCurve,Binary,"00,00,00,00,00,00,00,00,C0,CC,0C,00,00,00,00,00,80,99,19,00,00,00,00,00,40,66,26,00,00,00,00,00,00,33,33,00,00,00,00,00",MarkC's mouse acceleration fix,UI
+HKCU:\Control Panel\Mouse,SmoothMouseYCurve,Binary,"00,00,00,00,00,00,00,00,00,00,38,00,00,00,00,00,00,00,70,00,00,00,00,00,00,00,A8,00,00,00,00,00,00,00,E0,00,00,00,00,00",MarkC's mouse acceleration fix,UI
+HKCU:\Control Panel\Mouse,MouseSensitivity,String,10,MarkC's mouse acceleration fix,UI
+HKCU:\Control Panel\Mouse,MouseSpeed,String,0,MarkC's mouse acceleration fix,UI
+HKCU:\Control Panel\Mouse,MouseThreshold1,String,0,MarkC's mouse acceleration fix,UI
+HKCU:\Control Panel\Mouse,MouseThreshold2,String,0,MarkC's mouse acceleration fix,UI
