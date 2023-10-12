@@ -1,8 +1,12 @@
 Name,Parameters
 7zip,
 discord,
+microsoft-windows-terminal,
 git,/WindowsTerminal
 nmap,
 putty,
 vlc,
 windirstat,
+winscp,
+slack,
+spotify,
