@@ -2,7 +2,7 @@ Name,Parameters
 7zip,
 discord,
 microsoft-windows-terminal,
-git,/WindowsTerminal
+git,/GitAndUnixToolsOnPath /WindowsTerminal /NoShellIntegration
 nmap,
 putty,
 vlc,
@@ -10,3 +10,4 @@ windirstat,
 winscp,
 slack,
 spotify,
+vscode,/NoDesktopIcon /NoQuicklaunchIcon /NoQuicklaunchIcon
